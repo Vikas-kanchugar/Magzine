@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fi';
 import { articles, getRelatedArticles, contributors } from '../data/mockData.js';
 import ArticleCard from '../components/ArticleCard';
-import mockData from "../data/mockData.js";
+import { articles, categories, issues, contributors } from '../data/mockData';   //
 
 const Article = () => {
   const { id } = useParams();
