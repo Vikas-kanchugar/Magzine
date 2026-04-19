@@ -6,8 +6,9 @@ import {
   FiShare2, FiChevronLeft, FiChevronRight, FiZoomIn, FiX,
   FiClock, FiEye, FiSave, FiMessageCircle
 } from 'react-icons/fi';
-import { articles, getRelatedArticles, contributors } from '../data/mockData';
+import { articles, getRelatedArticles, contributors } from '../data/mockData.js';
 import ArticleCard from '../components/ArticleCard';
+import mockData from "../data/mockData.js";
 
 const Article = () => {
   const { id } = useParams();
