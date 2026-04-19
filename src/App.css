@@ -1,0 +1,226 @@
+/* ============================================
+   PROFESSIONAL EDITORIAL MAGAZINE STYLES
+   Color Palette:
+   - Primary: #1a1a1a (near black)
+   - Secondary: #f5f3ef (warm off-white)
+   - Accent: #c6a43f (refined gold)
+   - Muted tones: #6b6b6b, #e5e0d5
+   ============================================ */
+
+/* Custom cursor (optional, kept for premium feel) */
+.custom-cursor {
+  cursor: none;
+}
+
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #c6a43f;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.custom-cursor-outline {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #c6a43f;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.2s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+.custom-cursor-outline.hover {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(198, 164, 63, 0.1);
+  border-width: 2px;
+  opacity: 1;
+}
+
+/* Hero section enhancements */
+.hero-title {
+  background: linear-gradient(135deg, #1a1a1a 0%, #6b6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .hero-title {
+  background: linear-gradient(135deg, #ffffff 0%, #c6a43f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Article card hover effects */
+.article-card {
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.4s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Magazine grid – asymmetric layout support */
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-feature-large {
+  grid-column: span 8;
+}
+
+.grid-feature-small {
+  grid-column: span 4;
+}
+
+@media (max-width: 768px) {
+  .magazine-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .grid-feature-large,
+  .grid-feature-small {
+    grid-column: span 1;
+  }
+}
+
+/* Pull quotes styling */
+.pull-quote {
+  @apply font-serif text-2xl md:text-3xl italic font-light leading-tight text-gold-600 dark:text-gold-400 border-l-4 border-gold-500 pl-6 my-8;
+}
+
+/* Rich text article styling (overrides for prose) */
+.prose blockquote {
+  @apply font-serif text-xl italic font-light border-l-4 border-gold-500 pl-6 my-6 text-gray-700 dark:text-gray-300;
+}
+
+.prose h2 {
+  @apply text-3xl font-serif font-bold mt-12 mb-4 tracking-tight;
+}
+
+.prose h3 {
+  @apply text-2xl font-serif font-semibold mt-8 mb-3;
+}
+
+.prose a {
+  @apply text-gold-600 dark:text-gold-400 underline-offset-2 hover:underline transition-colors;
+}
+
+/* Category strip hover */
+.category-strip {
+  transition: all 0.3s ease;
+}
+
+.category-strip:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Smooth page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Pricing card highlight */
+.pricing-card-recommended {
+  border: 2px solid #c6a43f;
+  box-shadow: 0 10px 30px -10px rgba(198, 164, 63, 0.3);
+  transform: scale(1.02);
+}
+
+/* Loading shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.2) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Button hover effects */
+.btn-outline-gold {
+  @apply border border-gold-500 text-gold-600 dark:text-gold-400 hover:bg-gold-500 hover:text-white transition-all duration-300;
+}
+
+/* Footer styling */
+.footer-links a {
+  @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+}
+
+/* Magazine cover hover overlay */
+.magazine-cover-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+  transition: opacity 0.4s;
+}
+
+/* Reader progress bar */
+.reader-progress {
+  background: linear-gradient(90deg, #c6a43f, #1a1a1a);
+  height: 3px;
+  border: none;
+}
+
+/* Contact form focus */
+.form-input:focus {
+  @apply ring-2 ring-gold-500 border-transparent;
+}
+
+/* Dark mode overrides for professional look */
+.dark .prose blockquote {
+  @apply text-gray-300 border-gold-500;
+}
+
+.dark .bg-editorial-light {
+  background-color: #2a2a2a;
+}
+
+/* Responsive images */
+.responsive-image {
+  @apply w-full h-auto object-cover rounded-xl;
+}
+
+/* Magazine-style drop shadow for cards */
+.card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+}
