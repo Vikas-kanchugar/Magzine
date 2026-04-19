@@ -734,3 +734,8 @@ export const getIssueBySlug = (slug) => {
 export const getContributorById = (id) => {
   return contributors.find(contributor => contributor.id === id);
 };
+// src/data/mockData.js
+export const articles = [];
+export const categories = [];
+export const issues = [];
+export const contributors = [];
