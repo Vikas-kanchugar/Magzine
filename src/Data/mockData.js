@@ -734,5 +734,3 @@ export const getIssueBySlug = (slug) => {
 export const getContributorById = (id) => {
   return contributors.find(contributor => contributor.id === id);
 };
-export const categories = [];
-export const articles = [];
