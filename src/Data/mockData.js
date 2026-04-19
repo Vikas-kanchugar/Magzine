@@ -732,3 +732,33 @@ export const getIssueBySlug = (slug) => {
 export const getContributorById = (id) => {
   return contributors.find(contributor => contributor.id === id);
 };
+// src/data/mockData.js
+
+export const articles = [
+  {
+    id: 1,
+    title: "Sample Article",
+    excerpt: "This is a sample.",
+    category: "Culture",
+    categorySlug: "culture",
+    author: "Test Author",
+    authorImage: "https://randomuser.me/api/portraits/women/1.jpg",
+    date: "April 2025",
+    readTime: 5,
+    image: "https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=800",
+    content: "<p>Content</p>"
+  }
+];
+
+export const categories = [
+  {
+    name: "Culture",
+    slug: "culture",
+    count: 1,
+    image: "https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=400",
+    description: "Arts"
+  }
+];
+
+export const issues = [];
+export const contributors = [];
