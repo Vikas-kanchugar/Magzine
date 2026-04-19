@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import ArticleCard from '../components/ArticleCard';
-import { articles, categories } from '../data/mockData';
+import { categories, articles } from "../data/mockData.js";
 import { Link } from 'react-router-dom';
 
 const Home = () => {
