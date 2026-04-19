@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ContributorCard from '../components/ContributorCard';
-import { contributors } from '../data/mockData';
+import { contributors } from '../data/mockdata';
 
 const Contributors = () => {
   return (

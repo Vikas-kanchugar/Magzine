@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import IssueCard from '../components/IssueCard';
-import { issues } from '../data/mockData';   // ✅ only import what you need
+import { issues } from '../data/mockData';
 
 const Issues = () => {
   const [filterYear, setFilterYear] = useState('all');
