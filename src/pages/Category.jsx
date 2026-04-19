@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ArticleCard from '../components/ArticleCard';
-import { categories, articles } from '../data/mockData';   // ← only one line
+import { categories, articles } from "../data/mockData.js"; // ← only one line
 
 const Category = () => {
   const { slug } = useParams();
