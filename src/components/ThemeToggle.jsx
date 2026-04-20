@@ -3,23 +3,28 @@ import { motion } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(false);
+  // Initialize state synchronously from localStorage or system preference
+  const [isDark, setIsDark] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') return true;
+    if (saved === 'light') return false;
+    // Fallback to system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
+  // Apply the theme class to <html> element on mount and when isDark changes
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
-  }, []);
-
-  const toggleTheme = () => {
-    const newIsDark = !isDark;
-    setIsDark(newIsDark);
-    if (newIsDark) {
+    if (isDark) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
+  }, [isDark]);
+
+  const toggleTheme = () => {
+    setIsDark(prev => !prev);
   };
 
   return (
