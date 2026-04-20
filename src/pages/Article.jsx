@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fi';
 import { articles, getRelatedArticles, contributors } from '../data/mockData';
 import ArticleCard from '../components/ArticleCard';
+
 const Article = () => {
   const { id } = useParams();
   const navigate = useNavigate();
