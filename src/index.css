@@ -93,3 +93,6 @@
   --color-gold-500: #e6b422;
   --color-gold-600: #cc9c1c;
 }
+body{
+  overscroll-behavior: none;
+}
