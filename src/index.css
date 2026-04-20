@@ -7,9 +7,12 @@
 @layer base {
   * {
     @apply scroll-smooth;
-    overscroll-behavior: none;
+    
   }
-
+html {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
   body {
     @apply font-sans antialiased bg-white dark:bg-dark-100 text-gray-900 dark:text-gray-100;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
@@ -94,7 +97,4 @@
 .dark {
   --color-gold-500: #e6b422;
   --color-gold-600: #cc9c1c;
-}
-body{
-  overscroll-behavior: none;
 }
