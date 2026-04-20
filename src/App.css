@@ -224,3 +224,7 @@
 .card-shadow:hover {
   box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
 }
+
+body {
+  overscroll-behavior: none;
+}
