@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  <img src="(https://raw.githubusercontent.com/Vikas-kanchugar/Magzine/blob/main/src/assets/image/image.png)" alt="EDITIONS Magazine Logo" width="400">
+  <img src="(https://raw.githubusercontent.com/Vikas-kanchugar/Magzine/blob/main/src/assets/Image/image.png)" alt="EDITIONS Magazine Logo" width="400">
 
   ### 🌟 Live Demo: [editions-magzine.vercel.app](https://editions-magzine.vercel.app)
 
